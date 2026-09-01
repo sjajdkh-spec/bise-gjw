@@ -19,7 +19,7 @@ db = Database(cfg["MONGODB_URI"], cfg["DB_NAME"])
 intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix=cfg["PREFIX"], intents=intents, help_command=None)
-provider = BiseGujranwalaProvider(cfg["OFFICIAL_RESULT_URL"], timeout=cfg["HTTP_TIMEOUT"])
+provider = BiseGujranwalaProvider(cfg["OFFICIAL_RESULT_URL"], cfg["FALLBACK_RESULT_URL"], timeout=cfg["HTTP_TIMEOUT"])
 
 def admin_only():
     async def predicate(ctx):

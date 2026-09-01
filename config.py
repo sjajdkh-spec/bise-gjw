@@ -17,6 +17,7 @@ def load_config():
         ),
         "RESULT_CHANNEL_ID": int(os.getenv("RESULT_CHANNEL_ID", "0")),
         "MENTION_ROLE_ID": int(os.getenv("MENTION_ROLE_ID", "0")),
+        "FALLBACK_RESULT_URL": os.getenv("FALLBACK_RESULT_URL", ""),
         "HTTP_TIMEOUT": float(os.getenv("HTTP_TIMEOUT", "20")),
         "PER_REQUEST_DELAY": float(os.getenv("PER_REQUEST_DELAY", "2")),
         "AUTO_CHECK_ENABLED": os.getenv("AUTO_CHECK_ENABLED", "true").lower() == "true",

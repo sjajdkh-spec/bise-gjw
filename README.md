@@ -67,3 +67,7 @@ and:
 The checker polls configured, unannounced rolls. When a public official result response is available, it saves the result in MongoDB and announces it once in the configured result channel.
 
 Do not set the polling interval to an aggressive value. The default loop is 60 seconds and requests are delayed between roll numbers.
+
+
+## Updated 403 handling
+The provider now handles 403, 429, 5xx, CAPTCHA/security pages, and an optional public fallback URL. It does not bypass access controls. It supports 9th/10th/11th/12th and 2026 input.
